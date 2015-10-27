@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Implementation-Title: sample
+Implementation-Version: 1.0.0-SNAPSHOT
+Built-By: sood_s
+Implementation-Vendor-Id: com.worksap.stm
+Build-Jdk: 1.8.0_60
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+

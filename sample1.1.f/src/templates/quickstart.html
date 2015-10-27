@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+   <title>Quickstart</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <ct th:replace="fragments/header :: commonhead"></ct>
+<script src="resources/app/js/calendar.js" type="text/javascript"></script>
+    <script src="https://apis.google.com/js/client.js?onload=checkAuth">
+    </script>
+    <ct th:replace="fragments/header :: commonhead"></ct>
+  </head>
+  <body>
+  <!-- Common header -->
+	<div th:replace="fragments/header :: header"></div>
+    <div id="authorize-div" style="display: none; padding-top: 150px;">
+      <span>Authorize access to Google Calendar API</span>
+      <!--Button for the user to click to initiate auth sequence -->
+      <button id="authorize-button" onclick="handleAuthClick(event)">
+        Authorize
+      </button>
+    </div>
+    <pre id="output"></pre>
+    
+    
+      <!-- Common footer -->
+    <div th:replace="fragments/footer :: footer"></div>
+	<script src="resources/app/js/meeting.js" type="text/javascript"></script>
+  </body>
+</html>

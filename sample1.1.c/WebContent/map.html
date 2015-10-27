@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+  <head>
+  <ct th:replace="fragments/header :: commonhead"></ct>
+  <script src="resources/app/js/maps.js" type="text/javascript"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> </meta>
+    <ct th:replace="fragments/header :: commonhead"></ct>
+    <title>Place searches</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no"> </meta>
+    <meta charset="utf-8"> </meta>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding-left: 200px;
+        padding-top: 100px;
+      }
+
+      #map {
+        height: 400px;
+        width: 600px;
+        border: 1px solid #333;
+        margin-top: 1.6em;
+      }
+    </style>
+    
+  </head>
+  <body >
+  <!-- Common header -->
+	<div th:replace="fragments/header :: header"></div>
+		<div class="container" id="layout">
+     		 <div class="row">
+      			  <div class="col-lg-6 col-sm-6">
+  						 <div style="width:500px; margin-top: 5.6em; ">
+        					  <label for="txtAddress" class="label">Address</label>
+       							   <div style="clear:both;"></div>
+        							  <input id="txtAddress" type="text" class="textbox" />
+       								   <input id="btnGetLatLng" type="button" class="button" value="Find" onclick="getLatLng();"/>
+										       <select id="ddlViewBy" onchange="getLatLng()">
+  <option value="1">store</option>
+  <option value="2" selected="selected">restaurant</option>
+  <option value="3">amusement_park</option>
+  <option value="4">electronics_store</option>
+  <option value="5">park</option>
+  <option value="6">shopping_mall</option>
+  <option value="7">university</option>
+ 
+  
+    </select>
+						</div>
+						<div id="map"></div>
+						
+						
+						<button   id="output" onclick="myFunction()" >get list</button>
+						<div id="display" style="height: 50px; width: 100%;"></div>
+				</div>
+		</div>
+	</div>
+
+    
+    <script src="https://maps.googleapis.com/maps/api/js?&amp;libraries=places&amp;callback=initMap" async = "defer"></script>
+
+    <!-- Common footer -->
+    <div th:replace="fragments/footer :: footer"></div>
+	<script src="resources/app/js/map.js" type="text/javascript"></script>
+	
+  </body>
+</html>
