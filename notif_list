@@ -1,0 +1,8 @@
+use s179;
+create table notif_list(notif_id int not null auto_increment, notif_name varchar(100) not null, notif_description text,notif_status varchar(20),notif_time datetime not null,notif_archived bool default false,primary key(notif_id));
+insert into notif_list values(1,'Gathering Requirement','Requirement Gathering','SALES_MANAGER',curtime(),0);
+insert into notif_list values(2,'Application Designing','Application Designing','SALES_REPRESENTATIVE',curtime(),0);
+insert into notif_list values(3,'Implementation','Implementation','REGIONAL_MANAGER',curtime(),0);
+insert into notif_list values(4,'Unit Testing','Unit Testing','REGIONAL_MANAGER',curtime(),0);
+insert into notif_list values(5,'Maintanence','Maintanence','SALES_MANAGER',curtime(),0);
+select * from notif_list;
